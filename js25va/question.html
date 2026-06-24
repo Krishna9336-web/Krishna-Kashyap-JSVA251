@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <label for="num1">Enter First Number :</label>
+    <input type="number" id="num1">
+
+    <br><br>
+
+    <label for="num2">Enter Second Number :</label>
+    <input type="number" id="num2">
+
+    <br><br>
+
+    <button onclick="operation('sum')">Sum</button>
+
+    <br><br>
+
+    <button onclick="operation('diff')">Difference</button>
+
+    <br><br>
+
+    <button onclick="operation('pro')">Product</button>
+
+    <br><br>
+
+    <button onclick="operation('div')">Division</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function operation(type) {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let result;
+
+            if (type === 'sum') {
+                result = a + b;
+            }
+            else if (type === 'diff') {
+                result = a - b;
+            }
+            else if (type === 'pro') {
+                result = a * b;
+            }
+            else if (type === 'div') {
+                result = a / b;
+            }
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+
+</html>
